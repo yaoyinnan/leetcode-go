@@ -7,37 +7,13 @@
 1. 输入：`head = [1,3,2]`
 2. 输出：`[2,3,1]`
 
-## 准备工作
-
-为了便于测试，为链表实现`NewListNode`构造函数和`Slice`方法。
-
-```go
-func NewListNode(v ...int) *ListNode {
-    if len(v) == 0 {
-        return nil
-    }
-    return &ListNode{
-        Val:  v[0],
-        Next: NewListNode(v[1:]...),
-    }
-}
-
-func (p *ListNode) Slice() []int {
-    if p == nil {
-        return nil
-    }
-    if p.Next == nil {
-        return []int{p.Val}
-    }
-    return append([]int{p.Val},
-        p.Next.Slice()...,
-    )
-}
-```
-
 ## 方案V0
 
+### 思路及算法
+
 递归法
+
+### 代码
 
 ```go
 func ReversePrint(head *ListNode) []int {
@@ -48,9 +24,18 @@ func ReversePrint(head *ListNode) []int {
 }
 ```
 
+### 复杂度分析
+
+- 时间复杂度：O(n)，其中 n 是链表的长度。
+- 空间复杂度：O(1)。
+
 ## 方案V1
 
+### 思路及算法
+
 非递归法
+
+### 代码
 
 ```go
 func reversePrint1(head *ListNode) []int {
@@ -71,3 +56,8 @@ func reversePrint1(head *ListNode) []int {
 	return result
 }
 ```
+
+### 复杂度分析
+
+- 时间复杂度：O(n)，其中 n 是链表的长度。循环两次，先构建数组再翻转，平均为n。
+- 空间复杂度：O(n)。
