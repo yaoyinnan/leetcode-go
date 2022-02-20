@@ -50,7 +50,11 @@ return arr
 
 ## 方案V0
 
+### 思路及算法
+
 使用头插法构建翻转链表
+
+### 代码
 
 ```go
 func reverseList0(head *ListNode) *ListNode {
@@ -67,3 +71,9 @@ func reverseList0(head *ListNode) *ListNode {
 	return newHead
 }
 ```
+
+### 复杂度分析
+
+- 时间复杂度：O(n)，其中 n 是链表的长度。
+
+- 空间复杂度：O(1)。
