@@ -37,7 +37,11 @@ func (p *ListNode) Slice() []int {
 
 ## 方案V0
 
+### 思路及算法
+
 递归法
+
+### 代码
 
 ```go
 func ReversePrint(head *ListNode) []int {
@@ -48,9 +52,19 @@ func ReversePrint(head *ListNode) []int {
 }
 ```
 
+### 复杂度分析
+
+- 时间复杂度：O(n)，其中 n 是链表的长度。
+
+- 空间复杂度：O(1)。
+
 ## 方案V1
 
+### 思路及算法
+
 非递归法
+
+### 代码
 
 ```go
 func reversePrint1(head *ListNode) []int {
@@ -71,3 +85,9 @@ func reversePrint1(head *ListNode) []int {
 	return result
 }
 ```
+
+### 复杂度分析
+
+- 时间复杂度：O(n)，其中 n 是链表的长度。循环两次，先构建数组再翻转，平均为n。
+
+- 空间复杂度：O(n)。
