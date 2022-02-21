@@ -36,7 +36,6 @@ func levelOrder(root *TreeNode) []int {
 		if p.Right != nil {
 			tempStack = append(tempStack, p.Right)
 		}
-
 	}
 
 	return result
