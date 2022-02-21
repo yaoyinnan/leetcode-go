@@ -9,7 +9,7 @@ import (
 	"testing"
 )
 
-func TestReversePrint0(t *testing.T) {
+func TestLevelOrder(t *testing.T) {
 	for i, testCase := range tests {
 		result := levelOrder(
 			NewTree(testCase.a),
