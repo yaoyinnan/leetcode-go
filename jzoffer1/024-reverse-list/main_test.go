@@ -9,9 +9,9 @@ import (
 	"testing"
 )
 
-func TestReversePrint0(t *testing.T) {
+func TestReverseList(t *testing.T) {
 	for i, testCase := range tests {
-		result := reverseList0(
+		result := reverseList(
 			NewListNode(testCase.a...),
 		)
 		Assertf(t, reflect.DeepEqual(result.Array(), testCase.re),

@@ -20,10 +20,10 @@ func main() {
 		},
 	}
 
-	fmt.Println(reverseList0(l))
+	fmt.Println(reverseList(l))
 }
 
-func reverseList0(head *ListNode) *ListNode {
+func reverseList(head *ListNode) *ListNode {
 	p := head
 	var q *ListNode
 	var newHead *ListNode
