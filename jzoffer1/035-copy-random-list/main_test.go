@@ -9,7 +9,7 @@ import (
 	"testing"
 )
 
-func TestReversePrint0(t *testing.T) {
+func TestCopyRandomList0(t *testing.T) {
 	for i, testCase := range tests {
 		result := copyRandomList0(
 			NewRandomList(testCase.a),
@@ -21,7 +21,7 @@ func TestReversePrint0(t *testing.T) {
 	}
 }
 
-func TestReversePrint1(t *testing.T) {
+func TestCopyRandomList1(t *testing.T) {
 	for i, testCase := range tests {
 		result := copyRandomList1(
 			NewRandomList(testCase.a),
@@ -33,7 +33,7 @@ func TestReversePrint1(t *testing.T) {
 	}
 }
 
-func TestReversePrint2(t *testing.T) {
+func TestCopyRandomList2(t *testing.T) {
 	for i, testCase := range tests {
 		result := copyRandomList2(
 			NewRandomList(testCase.a),
