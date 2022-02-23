@@ -155,7 +155,6 @@ func levelOrder1(root *TreeNode) [][]int {
 
 	return result
 }
-
 ```
 
 ### 复杂度分析
