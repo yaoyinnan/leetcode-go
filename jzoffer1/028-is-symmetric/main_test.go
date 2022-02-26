@@ -5,44 +5,35 @@
 package main
 
 import (
-	"reflect"
 	"testing"
 )
 
-func TestLevelOrder(t *testing.T) {
+func TestIsSymmetric(t *testing.T) {
 	for i, testCase := range tests {
-		result := levelOrder(
+		result := isSymmetric(
 			NewTree(testCase.a),
 		)
-		Assertf(t, reflect.DeepEqual(result, testCase.c),
+		Assertf(t, result == testCase.flag,
 			"%d: expect = %v, got = %v",
-			i, testCase.c, result,
+			i, testCase.flag, result,
 		)
 	}
 }
 
 var tests = []struct {
-	a []int
-	c [][]int
+	a    []int
+	flag bool
 }{
 	{
-		a: []int{3, 9, 20, -1000, -1000, 15, 7},
-		c: [][]int{{3}, {20, 9}, {15, 7}},
+		a:    []int{1, 2, 2, 3, 4, 4, 3},
+		flag: true,
 	},
 	{
-		a: []int{0, 2, 4, 1, -1000, 3, -1, 5, 1, -1000, 6, -1000, 8},
-		c: [][]int{{0}, {4, 2}, {1, 3, -1}, {8, 6, 1, 5}},
+		a:    []int{1, 2, 2, -1000, 3, -1000, 3},
+		flag: false,
 	},
 	{
-		a: []int{1, -1000, 2, -1000, 3},
-		c: [][]int{{1}, {2}, {3}},
-	},
-	{
-		a: []int{1, 2, -1000, 3, -1000, -1000, -1000},
-		c: [][]int{{1}, {2}, {3}},
-	},
-	{
-		a: []int{},
-		c: [][]int{},
+		a:    []int{},
+		flag: true,
 	},
 }
