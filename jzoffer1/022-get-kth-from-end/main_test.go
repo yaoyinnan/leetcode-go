@@ -9,10 +9,10 @@ import (
 	"testing"
 )
 
-func TestDeleteNode(t *testing.T) {
+func TestGetKthFromEnd(t *testing.T) {
 	for i, testCase := range tests {
-		result := deleteNode(
-			NewListNode(testCase.a...), testCase.v,
+		result := getKthFromEnd(
+			NewListNode(testCase.a...), testCase.k,
 		)
 		Assertf(t, reflect.DeepEqual(result, testCase.re),
 			"%d: expect = %v, got = %v",
@@ -23,21 +23,16 @@ func TestDeleteNode(t *testing.T) {
 
 var tests = []struct {
 	a, re []int
-	v     int
+	k     int
 }{
 	{
 		a:  []int{2, 4, 3},
 		re: []int{4, 3},
-		v:  2,
+		k:  2,
 	},
 	{
 		a:  []int{2, 4, 3},
-		re: []int{2, 3},
-		v:  4,
-	},
-	{
-		a:  []int{},
-		re: []int{},
-		v:  1,
+		re: []int{3},
+		k:  1,
 	},
 }
